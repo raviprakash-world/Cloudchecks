@@ -4,60 +4,44 @@ import Onboarding from 'react-native-onboarding-swiper';
 import { useNavigation } from '@react-navigation/native';
 
 
-const CustomOnboardingPage = ({ title, subtitle, backgroundColor }) => {
-  return (
-    <View style={[styles.container, { backgroundColor }]}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.subtitle}>{subtitle}</Text>
-      <Text style={styles.subtitle}>{subtitle}</Text>
-    </View>
-  );
-};
 
 
 
 const OnboardingScreen = () => {
     const navigation = useNavigation();
 
-   const pages = [
-    {
-      title: 'Welcome to MyApp',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      backgroundColor: '#fff',
-      component: <CustomOnboardingPage />,
-    },
-    // add more custom pages here
-  ];
+   
+   
   return (
 
-<Onboarding
-pages={pages}
+<Onboarding 
 
+onSkip={() => navigation.replace("Home")}
 onDone={()=>navigation.replace("Home")}
-//   pages={[
-//     {
-//       backgroundColor: '#fff',
-//       image: <Image source={{uri:"https://www.mindinventory.com/blog/wp-content/uploads/2022/10/Login-Screen-Design.png"}} className="w-73 h-72 object-contain"/>,
-//       title: 'Onboarding',
-//       subtitle: 'Done with React Native Onboarding Swiper',
-//     },
-//     {
-//       backgroundColor: '#fff',
-//       image: <Image source={{uri:"https://www.mindinventory.com/blog/wp-content/uploads/2022/10/Login-Screen-Design.png"}} className="w-73 h-72 object-contain"/>,
-//       title: 'Onboarding',
-//       subtitle: 'Done with React Native Onboarding Swiper',
-//     },
-//     {
-//       backgroundColor: '#fff',
-//       image: <Image source={{uri:"https://www.mindinventory.com/blog/wp-content/uploads/2022/10/Login-Screen-Design.png"}} className="w-73 h-72 object-contain"/>,
-//       title: 'Onboarding',
-//       subtitle: 'Done with React Native Onboarding Swiper',
-//     }
+  pages={[
+    {
+      backgroundColor: '#fff',
+      image: <Image source={{uri:"https://as1.ftcdn.net/v2/jpg/04/60/95/58/1000_F_460955829_DSUiSeVXyFHMkWprBe7ZRM1C8uJG5FgX.jpg"}} style={{ width: 73, height: 222, resizeMode: 'cover' }}/>,
+      title: 'Weather app',
+      subtitle: 'screen 1',
+    },
+    {
+      backgroundColor: '#fff',
+      image: <Image source={{uri:"https://as1.ftcdn.net/v2/jpg/04/60/95/58/1000_F_460955829_DSUiSeVXyFHMkWprBe7ZRM1C8uJG5FgX.jpg"}} style={{ width: 73, height: 222, resizeMode: 'cover' }}/>,
+      title: 'Weather app',
+      subtitle: 'screen 2',
+    },
+    {
+      backgroundColor: '#fff',
+      image: <Image source={{uri:"https://as1.ftcdn.net/v2/jpg/04/60/95/58/1000_F_460955829_DSUiSeVXyFHMkWprBe7ZRM1C8uJG5FgX.jpg"}} style={{ width: 73, height: 222, resizeMode: 'cover' }}/>,
+      title: 'Weather app',
+      subtitle: 'screen 3',
+    }
+    
    
     
-//   ]}
-></Onboarding>
+  ]}
+/>
 
 
   )
