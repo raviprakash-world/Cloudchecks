@@ -15,28 +15,13 @@ const WeatherInfo = ({currentWeather,unitsSystem}) => {
      current:{ feelslike_f,feelslike_c,air_quality,cloud,condition,is_day},location:{name,region,tz_id}
     } = currentWeather
 
-//     console.log(name);
-//    const {
-//         current: { temperature,weather_descriptions },
-//         // weather: [details],
-//         name,
-//     } = currentWeather
+
     const { icon,  text ,code} = condition
 
-    // console.log(temperature);
 
-    // console.log(`../assets/${is_day?"day":"night"}/${code}.png`);
 
-    // const iconUrl = `https://openweathermap.org/img/wn/10d@4x.png`
-    const url = icon;
-const splitUrl = url.split("/");
-const extractedPath = `/${splitUrl[splitUrl.length - 2]}/${splitUrl[splitUrl.length - 1]}`;
-
-console.log(extractedPath); // Output: /night/143.png
-    const iconUrl = `../assets/${extractedPath}`
-    console.log(iconUrl);
-    const imageSource = { uri: iconUrl };
-    console.log(imageSource);
+const iconUrl = 'https:' + icon;
+const imageSource = { uri: iconUrl };
 
     return (
         <View style={styles.weatherInfo}>
