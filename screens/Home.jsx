@@ -12,7 +12,7 @@ import colors from '../constants/colors';
 
 
 const BASE_WEATHER_URL = 'http://api.weatherapi.com/v1'
-const WEATHER_API_KEY = 'f7fbf874a4304a1882d164630232704'
+const WEATHER_API_KEY = ''
 const DegreeText = ({val,size ,weight,color = "white",style}) =>{
 <View style={[styles.degreeText,style]}>
 <FontAwesome name="circle-o" size={size > 18 ? size / 4:8} color={color} className="text-2xl font-bold text-gray-800"/>
